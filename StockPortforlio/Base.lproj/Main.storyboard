@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="muz-8K-yEl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hfU-2o-PNj">
+            <objects>
+                <tableViewController id="R7R-cX-ngl" customClass="ViewController" customModule="StockPortforlio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="53z-jm-A4X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="77" id="Qvw-th-tzb" customClass="StockTableViewCell" customModule="StockPortforlio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qvw-th-tzb" id="BGr-xH-BFd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhy-aE-VSD">
+                                            <rect key="frame" x="20" y="11" width="275" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JG-u7-nJd">
+                                            <rect key="frame" x="20" y="44" width="275" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gg-9O-eQI">
+                                            <rect key="frame" x="303" y="23" width="91" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="91" id="E46-Ff-MDg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bhy-aE-VSD" secondAttribute="bottom" constant="20" id="4zu-Uw-1ex"/>
+                                        <constraint firstItem="Bhy-aE-VSD" firstAttribute="leading" secondItem="BGr-xH-BFd" secondAttribute="leadingMargin" id="DPX-nb-HGH"/>
+                                        <constraint firstItem="3gg-9O-eQI" firstAttribute="leading" secondItem="Bhy-aE-VSD" secondAttribute="trailing" constant="8" id="EGo-mj-cn5"/>
+                                        <constraint firstItem="Bhy-aE-VSD" firstAttribute="top" secondItem="BGr-xH-BFd" secondAttribute="topMargin" id="NtV-Ff-Ege"/>
+                                        <constraint firstItem="3gg-9O-eQI" firstAttribute="top" secondItem="BGr-xH-BFd" secondAttribute="topMargin" constant="12" id="SXX-yR-B88"/>
+                                        <constraint firstItem="3JG-u7-nJd" firstAttribute="top" secondItem="BGr-xH-BFd" secondAttribute="topMargin" constant="33" id="VTs-j6-WeK"/>
+                                        <constraint firstItem="3gg-9O-eQI" firstAttribute="centerY" secondItem="BGr-xH-BFd" secondAttribute="centerY" id="bso-kq-uN1"/>
+                                        <constraint firstItem="3gg-9O-eQI" firstAttribute="trailing" secondItem="BGr-xH-BFd" secondAttribute="trailingMargin" id="fyY-LE-I6P"/>
+                                        <constraint firstItem="Bhy-aE-VSD" firstAttribute="leading" secondItem="3JG-u7-nJd" secondAttribute="leading" id="iuh-a4-ZZL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3JG-u7-nJd" secondAttribute="bottom" constant="4" id="kdn-zu-ahs"/>
+                                        <constraint firstItem="Bhy-aE-VSD" firstAttribute="trailing" secondItem="3JG-u7-nJd" secondAttribute="trailing" id="yUO-OV-rH1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Bhy-aE-VSD" id="J4i-k5-5Up"/>
+                                    <outlet property="tickerLabel" destination="3JG-u7-nJd" id="tzU-mc-3tM"/>
+                                    <outlet property="yieldLabel" destination="3gg-9O-eQI" id="3oD-Cw-PgX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R7R-cX-ngl" id="FnP-Yo-aYn"/>
+                            <outlet property="delegate" destination="R7R-cX-ngl" id="gAV-Up-zXa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1F2-Xh-46K"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUE-ha-dK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.05797101449286" y="88.392857142857139"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="z8T-st-8r1">
+            <objects>
+                <viewController storyboardIdentifier="InputVC" id="ke0-EF-Ty1" customClass="InputViewController" customModule="StockPortforlio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ICw-xo-Lss">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-Bx-0fn" userLabel="Name Label">
+                                <rect key="frame" x="20" y="142" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKM-87-j01" userLabel="Ticker Label">
+                                <rect key="frame" x="20" y="184" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-tL-rFw" userLabel="Exchange Label">
+                                <rect key="frame" x="20" y="226" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bought at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-vt-sn4" userLabel="Bought at Label">
+                                <rect key="frame" x="20" y="268" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Market Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-FM-Sa9" userLabel="Market Price Label">
+                                <rect key="frame" x="20" y="310" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXS-A9-6IS" userLabel="Name Text Field">
+                                <rect key="frame" x="92" y="140" width="302" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34I-AP-atJ" userLabel="Ticker Text Field">
+                                <rect key="frame" x="95" y="182" width="299" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fb-mb-i29" userLabel="Exchange Text Field">
+                                <rect key="frame" x="135" y="224" width="259" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-jq-FMT" userLabel="Bought at Text Field">
+                                <rect key="frame" x="135" y="266" width="259" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tL-fd-Mnp" userLabel="Market Price Text Field">
+                                <rect key="frame" x="163" y="308" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mW9-xv-4AW" userLabel="Number of Shares Text Field">
+                                <rect key="frame" x="223" y="350" width="171" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Shares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptN-zm-jJy" userLabel="Number of Shares Label">
+                                <rect key="frame" x="20" y="352" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-eW-IS3">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="trash" catalog="system" id="E6m-0W-qPz"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7pw-3R-ezs"/>
+                    </view>
+                    <connections>
+                        <outlet property="Toolbar" destination="w3c-eW-IS3" id="j6l-t5-BjJ"/>
+                        <outlet property="boughtAtLabel" destination="YGd-vt-sn4" id="30d-xG-M5W"/>
+                        <outlet property="boughtAtTxtField" destination="Y1Q-jq-FMT" id="ThF-00-3NK"/>
+                        <outlet property="exchangeLabel" destination="Axd-tL-rFw" id="Qy6-mr-264"/>
+                        <outlet property="exchangeTxtField" destination="8fb-mb-i29" id="l2o-HG-pRd"/>
+                        <outlet property="marketPriceLabel" destination="0mp-FM-Sa9" id="pJQ-0D-9ah"/>
+                        <outlet property="marketPriceTxtField" destination="9tL-fd-Mnp" id="Ky8-0n-UZm"/>
+                        <outlet property="nameLabel" destination="FE9-Bx-0fn" id="Hje-f3-JWG"/>
+                        <outlet property="nameTxtField" destination="dXS-A9-6IS" id="QQZ-TF-xbP"/>
+                        <outlet property="numSharesLabel" destination="ptN-zm-jJy" id="4xl-rr-wCK"/>
+                        <outlet property="numSharesTxtField" destination="mW9-xv-4AW" id="6G5-84-tQ4"/>
+                        <outlet property="tickerLabel" destination="yKM-87-j01" id="aJW-j8-Bl9"/>
+                        <outlet property="tickerTxtField" destination="34I-AP-atJ" id="tfq-az-QAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKd-nB-lGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959.4202898550727" y="76.339285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mqf-0a-lKc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muz-8K-yEl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HwN-3K-3cX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R7R-cX-ngl" kind="relationship" relationship="rootViewController" id="KgY-pw-5Ly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qf8-3Y-QHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash" catalog="system" width="60" height="64"/>
+    </resources>
+</document>
