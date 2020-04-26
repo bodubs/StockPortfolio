@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UITableViewController, StockDelegate {
     
 
-    var stocks = [Stock(name: "agile", bookPrice: "1.95", marketPrice: "2.29", exchange: "NASDAQ", symbol: "AGRX"), Stock(name: "Boeing", bookPrice: "100", marketPrice: "145", exchange: "NYSE", symbol: "BA")]
+    var stocks = [Stock]()
     
     
     override func viewDidLoad() {
@@ -20,7 +20,6 @@ class ViewController: UITableViewController, StockDelegate {
         title = "Portfolio"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonPressed))
     }
     
     @objc func addButtonPressed() {
@@ -28,10 +27,6 @@ class ViewController: UITableViewController, StockDelegate {
         let destinationVC = storyboard?.instantiateViewController(identifier: "InputVC") as! InputViewController
         destinationVC.delegate = self as! StockDelegate
         navigationController?.pushViewController(destinationVC, animated: true)
-        
-    }
-    
-    @objc func editButtonPressed() {
         
     }
     
@@ -59,8 +54,8 @@ class ViewController: UITableViewController, StockDelegate {
         
         let destinationVC = storyboard?.instantiateViewController(identifier: "InputVC") as! InputViewController
         destinationVC.stock = stock
+        destinationVC.index = indexPath.row
         destinationVC.delegate = self
-        //destinationVC.nameTxtField.text! = stocks[indexPath.row].name
         navigationController?.pushViewController(destinationVC, animated: true)
         
     }
@@ -71,12 +66,8 @@ class ViewController: UITableViewController, StockDelegate {
         self.tableView.reloadData()
     }
     
-    func removeStock(stock: Stock) {
-        for i in 0...(stocks.count - 1) {
-            if stocks[i].name == stock.name {
-                stocks.remove(at: i)
-            }
-        }
+    func removeStock(at index: Int) {
+        stocks.remove(at: index)
         tableView.reloadData()
     }
     

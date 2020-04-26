@@ -23,7 +23,7 @@ class Stock: Codable {
         self.name = name
         self.bookPrice = bookToDouble
         self.marketPrice = marketToDouble
-        self.yield = ((marketToDouble) / (bookToDouble)) - 1
+        self.yield = round(((marketToDouble / bookToDouble) - 1) * 100 * 100) / 100
         self.exchange = exchange
         self.symbol = symbol
     }

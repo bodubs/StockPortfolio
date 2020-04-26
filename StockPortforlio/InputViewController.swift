@@ -8,7 +8,7 @@
 
 protocol StockDelegate {
     func addStock(stock: Stock)
-    func removeStock(stock: Stock)
+    func removeStock(at index: Int)
 }
 
 import UIKit
@@ -17,6 +17,8 @@ class InputViewController: UIViewController {
     
     
     var stock: Stock?
+    
+    var index: Int?
     
     var delegate: StockDelegate?
     
@@ -42,7 +44,9 @@ class InputViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Remove", style: .default, handler: { (_) in
             if let delegate = self.delegate {
                 if let stock = self.stock {
-                    delegate.removeStock(stock: stock)
+                    if let index = self.index {
+                        delegate.removeStock(at: index)
+                    }
                 }
             }
             self.navigationController?.popViewController(animated: true)
@@ -71,12 +75,7 @@ class InputViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         if nameTxtField.text != nil && tickerTxtField.text != nil && exchangeTxtField.text != nil && boughtAtTxtField.text != nil && marketPriceLabel.text != nil && numSharesTxtField.text != nil {
             if let yield = getYield(marketPrice: marketPriceTxtField.text!, bookPrice: boughtAtTxtField.text!) {
-                var stockName = nameTxtField.text!
-                var stockExchange = exchangeTxtField.text!
-                var stockSymbol = tickerTxtField.text!
-                var bookPrice = boughtAtTxtField.text!
-                var marketPrice = marketPriceTxtField.text!
-                let newStock = Stock(name: stockName, bookPrice: bookPrice, marketPrice: marketPrice, exchange: stockExchange, symbol: stockSymbol)
+                let newStock = Stock(name: nameTxtField.text!, bookPrice: boughtAtTxtField.text!, marketPrice: marketPriceTxtField.text!, exchange: exchangeTxtField.text!, symbol: tickerTxtField.text!)
                 if let delegate = delegate {
                     delegate.addStock(stock: newStock)
                 }
