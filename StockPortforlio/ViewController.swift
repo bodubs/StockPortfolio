@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, StockDelegate {
+    
 
-    let stocks = ["Amazon", "Boeing", "Home Depot", "Apple"]
-    let yields = [10, 11, 12, -5]
-    let exchanges = ["NASDAQ", "NYSE", "NYSE", "NASDAQ"]
-    let symbol = ["AMZN", "BA", "HD", "AAPL"]
+    var stocks = [Stock(name: "agile", bookPrice: "1.95", marketPrice: "2.29", exchange: "NASDAQ", symbol: "AGRX"), Stock(name: "Boeing", bookPrice: "100", marketPrice: "145", exchange: "NYSE", symbol: "BA")]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,7 @@ class ViewController: UITableViewController {
     @objc func addButtonPressed() {
         
         let destinationVC = storyboard?.instantiateViewController(identifier: "InputVC") as! InputViewController
+        destinationVC.delegate = self as! StockDelegate
         navigationController?.pushViewController(destinationVC, animated: true)
         
     }
@@ -41,16 +41,43 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StockTableViewCell
-        cell.nameLabel.text = stocks[indexPath.row]
-        cell.yieldLabel.text = "\(yields[indexPath.row])%"
-        if yields[indexPath.row] < 0 {
+        cell.nameLabel.text = stocks[indexPath.row].name
+        cell.yieldLabel.text = "\(stocks[indexPath.row].yield)%"
+        if stocks[indexPath.row].yield < 0 {
             cell.yieldLabel.textColor = .red
         } else {
             cell.yieldLabel.textColor = .green
         }
-        cell.tickerLabel.text = exchanges[indexPath.row] + ": " + symbol[indexPath.row]
+        cell.tickerLabel.text = stocks[indexPath.row].exchange + ": " + stocks[indexPath.row].symbol
         cell.tickerLabel.textColor = .gray
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let stock = stocks[indexPath.row]
+        
+        let destinationVC = storyboard?.instantiateViewController(identifier: "InputVC") as! InputViewController
+        destinationVC.stock = stock
+        destinationVC.delegate = self
+        //destinationVC.nameTxtField.text! = stocks[indexPath.row].name
+        navigationController?.pushViewController(destinationVC, animated: true)
+        
+    }
+    
+    func addStock(stock: Stock) {
+        self.stocks.append(stock)
+        print(stocks)
+        self.tableView.reloadData()
+    }
+    
+    func removeStock(stock: Stock) {
+        for i in 0...(stocks.count - 1) {
+            if stocks[i].name == stock.name {
+                stocks.remove(at: i)
+            }
+        }
+        tableView.reloadData()
     }
     
 }

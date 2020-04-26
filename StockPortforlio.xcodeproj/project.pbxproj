@@ -15,6 +15,7 @@
 		C28C7147242A5F36002D7609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28C7146242A5F36002D7609 /* Assets.xcassets */; };
 		C28C714A242A5F36002D7609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28C7148242A5F36002D7609 /* LaunchScreen.storyboard */; };
 		C2C67BE7242E9CF300243ED8 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C67BE6242E9CF300243ED8 /* InputViewController.swift */; };
+		C2E7773B24488A8700B75F6C /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7773A24488A8700B75F6C /* Stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C28C7149242A5F36002D7609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28C714B242A5F36002D7609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C67BE6242E9CF300243ED8 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		C2E7773A24488A8700B75F6C /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C28C713D242A5F34002D7609 /* AppDelegate.swift */,
 				C28C713F242A5F34002D7609 /* SceneDelegate.swift */,
 				C28C7141242A5F34002D7609 /* ViewController.swift */,
+				C2E7773A24488A8700B75F6C /* Stock.swift */,
 				C28C7143242A5F34002D7609 /* Main.storyboard */,
 				C2C67BE6242E9CF300243ED8 /* InputViewController.swift */,
 				C201AA1E242C3D210040F2DA /* StockTableViewCell.swift */,
@@ -146,6 +149,7 @@
 			files = (
 				C28C7142242A5F34002D7609 /* ViewController.swift in Sources */,
 				C2C67BE7242E9CF300243ED8 /* InputViewController.swift in Sources */,
+				C2E7773B24488A8700B75F6C /* Stock.swift in Sources */,
 				C28C713E242A5F34002D7609 /* AppDelegate.swift in Sources */,
 				C201AA1F242C3D210040F2DA /* StockTableViewCell.swift in Sources */,
 				C28C7140242A5F34002D7609 /* SceneDelegate.swift in Sources */,
