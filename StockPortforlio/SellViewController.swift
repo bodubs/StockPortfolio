@@ -10,4 +10,13 @@ import UIKit
 
 class SellViewController: UIViewController {
     
+    @IBOutlet weak var SellAtTitleLabel: UILabel!
+    @IBOutlet weak var OrderTitleLabel: UILabel!
+    @IBOutlet weak var SellAtLabel: UILabel!
+    @IBOutlet weak var NumSharesLabel: UILabel!
+    @IBOutlet weak var OrderTotalLabel: UILabel!
+    
+    
+    @IBAction func ConfirmOrderButton(_ sender: Any) {
+    }
 }
