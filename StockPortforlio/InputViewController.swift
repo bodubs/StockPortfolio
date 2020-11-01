@@ -69,6 +69,7 @@ class InputViewController: UIViewController {
     @IBOutlet weak var marketPriceTxtField: UITextField!
     @IBOutlet weak var numSharesTxtField: UITextField!
     
+    @IBOutlet weak var SearchButton: UIButton!
     
     @IBOutlet weak var Toolbar: UIToolbar!
     

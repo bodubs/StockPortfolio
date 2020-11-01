@@ -14,6 +14,9 @@
 		C28C7145242A5F34002D7609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28C7143242A5F34002D7609 /* Main.storyboard */; };
 		C28C7147242A5F36002D7609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28C7146242A5F36002D7609 /* Assets.xcassets */; };
 		C28C714A242A5F36002D7609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28C7148242A5F36002D7609 /* LaunchScreen.storyboard */; };
+		C2959F202547C90D00B872BD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2959F1F2547C90D00B872BD /* SearchViewController.swift */; };
+		C2AD6C21254F349400D28415 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD6C20254F349400D28415 /* BuyViewController.swift */; };
+		C2AD6C23254F357400D28415 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD6C22254F357400D28415 /* SellViewController.swift */; };
 		C2C67BE7242E9CF300243ED8 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C67BE6242E9CF300243ED8 /* InputViewController.swift */; };
 		C2E7773B24488A8700B75F6C /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7773A24488A8700B75F6C /* Stock.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,9 @@
 		C28C7146242A5F36002D7609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28C7149242A5F36002D7609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28C714B242A5F36002D7609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2959F1F2547C90D00B872BD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		C2AD6C20254F349400D28415 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		C2AD6C22254F357400D28415 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		C2C67BE6242E9CF300243ED8 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		C2E7773A24488A8700B75F6C /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +73,10 @@
 				C28C7141242A5F34002D7609 /* ViewController.swift */,
 				C2E7773A24488A8700B75F6C /* Stock.swift */,
 				C28C7143242A5F34002D7609 /* Main.storyboard */,
+				C2AD6C22254F357400D28415 /* SellViewController.swift */,
+				C2AD6C20254F349400D28415 /* BuyViewController.swift */,
 				C2C67BE6242E9CF300243ED8 /* InputViewController.swift */,
+				C2959F1F2547C90D00B872BD /* SearchViewController.swift */,
 				C201AA1E242C3D210040F2DA /* StockTableViewCell.swift */,
 				C28C7146242A5F36002D7609 /* Assets.xcassets */,
 				C28C7148242A5F36002D7609 /* LaunchScreen.storyboard */,
@@ -148,10 +157,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28C7142242A5F34002D7609 /* ViewController.swift in Sources */,
+				C2AD6C21254F349400D28415 /* BuyViewController.swift in Sources */,
+				C2959F202547C90D00B872BD /* SearchViewController.swift in Sources */,
 				C2C67BE7242E9CF300243ED8 /* InputViewController.swift in Sources */,
 				C2E7773B24488A8700B75F6C /* Stock.swift in Sources */,
 				C28C713E242A5F34002D7609 /* AppDelegate.swift in Sources */,
 				C201AA1F242C3D210040F2DA /* StockTableViewCell.swift in Sources */,
+				C2AD6C23254F357400D28415 /* SellViewController.swift in Sources */,
 				C28C7140242A5F34002D7609 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
