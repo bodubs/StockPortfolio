@@ -88,8 +88,11 @@ class SearchViewController: UIViewController {
     }
     
     func populateInfo(with stockInfo: SearchResult) {
-        resultSymbol = stockInfo.symbol
-        resultCompany = stockInfo.companyName
+        DispatchQueue.main.async { // Correct
+            self.SymbolLabel.text = stockInfo.symbol
+            self.CompanyLabel.text = stockInfo.companyName
+        }
+        
     }
     
     /*
