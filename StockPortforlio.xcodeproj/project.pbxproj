@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C201AA1F242C3D210040F2DA /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201AA1E242C3D210040F2DA /* StockTableViewCell.swift */; };
+		C26DE6FD25607AD700590E50 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26DE6FC25607AD700590E50 /* IndexViewController.swift */; };
 		C28C713E242A5F34002D7609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C713D242A5F34002D7609 /* AppDelegate.swift */; };
 		C28C7140242A5F34002D7609 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C713F242A5F34002D7609 /* SceneDelegate.swift */; };
 		C28C7142242A5F34002D7609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C7141242A5F34002D7609 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		C201AA1E242C3D210040F2DA /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		C26DE6FC25607AD700590E50 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		C28C713A242A5F34002D7609 /* StockPortforlio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockPortforlio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28C713D242A5F34002D7609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28C713F242A5F34002D7609 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				C28C7141242A5F34002D7609 /* ViewController.swift */,
 				C2E7773A24488A8700B75F6C /* Stock.swift */,
 				C28C7143242A5F34002D7609 /* Main.storyboard */,
+				C26DE6FC25607AD700590E50 /* IndexViewController.swift */,
 				C2AD6C22254F357400D28415 /* SellViewController.swift */,
 				C2AD6C20254F349400D28415 /* BuyViewController.swift */,
 				C2C67BE6242E9CF300243ED8 /* InputViewController.swift */,
@@ -165,6 +168,7 @@
 				C201AA1F242C3D210040F2DA /* StockTableViewCell.swift in Sources */,
 				C2AD6C23254F357400D28415 /* SellViewController.swift in Sources */,
 				C28C7140242A5F34002D7609 /* SceneDelegate.swift in Sources */,
+				C26DE6FD25607AD700590E50 /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

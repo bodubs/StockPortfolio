@@ -37,6 +37,17 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
         SymbolLabel.text = resultSymbol
         CompanyLabel.text = resultCompany
+        SharePriceLabel.text = "--"
+        OpenLabel.text = "--"
+        HighLabel.text = "--"
+        LowLabel.text = "--"
+        YearHighLabel.text = "--"
+        YearLowLabel.text = "--"
+        VolumeLabel.text = "--"
+        AvgVolLabel.text = "--"
+        MktCapLabel.text = "--"
+        PERatioLabel.text = "--"
+        DivYieldLabel.text = "--"
     }
     
     @IBAction func SearchButton(_ sender: Any) {
@@ -80,17 +91,33 @@ class SearchViewController: UIViewController {
                 return
             }
             self.populateInfo(with: json)
-            print(json.symbol!)
-            print(json.companyName!)
             }).resume()
         
         
     }
     
     func populateInfo(with stockInfo: SearchResult) {
-        DispatchQueue.main.async { // Correct
+        DispatchQueue.main.async {
             self.SymbolLabel.text = stockInfo.symbol
             self.CompanyLabel.text = stockInfo.companyName
+            self.SharePriceLabel.text = "$\(String(stockInfo.close))"
+            self.OpenLabel.text = String(stockInfo.open)
+            self.HighLabel.text = String(stockInfo.high)
+            self.LowLabel.text = String(stockInfo.low)
+            self.YearHighLabel.text = "$\(String(stockInfo.week52High))"
+            self.YearLowLabel.text = "$\(String(stockInfo.week52Low))"
+            self.VolumeLabel.text = String(stockInfo.volume)
+            self.AvgVolLabel.text = String(stockInfo.avgTotalVolume)
+            self.MktCapLabel.text = "$\(String(stockInfo.marketCap))"
+            self.PERatioLabel.text = String(stockInfo.peRatio)
+//            if stockInfo.isUSMarketOpen == false {
+//                self.SharePriceLabel.text = String(stockInfo.close)
+//                self.OpenLabel.text = String(stockInfo.open)
+//                self.HighLabel.text = String(stockInfo.high)
+//                self.LowLabel.text = String(stockInfo.low)
+//                self.VolumeLabel.text = String(stockInfo.volume)
+//                self.AvgVolLabel.text = String(stockInfo.avgTotalVolume)
+//            }
         }
         
     }
